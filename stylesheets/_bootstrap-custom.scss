@@ -1,0 +1,106 @@
+// -------------------------------------------------------------------
+// Bootstrap Overridden Variables
+// -------------------------------------------------------------------
+$font-family-sans-serif: 'Lucida Grande', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+$font-family-serif: Georgia, 'Hiragino Mincho ProN', serif;
+$font-family-monospace: Menlo, 'Courier New', 'Hiragino Kaku Gothic ProN', monospace;
+$navbar-default-link-hover-color: orange;
+$container-lg: 970px;
+// -------------------------------------------------------------------
+// Bootstrap Core
+// -------------------------------------------------------------------
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+//@import "bootstrap/glyphicons";
+
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+//@import "bootstrap/tables";
+@import "bootstrap/forms";
+//@import "bootstrap/buttons";
+
+// Components
+@import "bootstrap/component-animations";
+//@import "bootstrap/dropdowns";
+//@import "bootstrap/button-groups";
+//@import "bootstrap/input-groups";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+//@import "bootstrap/breadcrumbs";
+//@import "bootstrap/pagination";
+//@import "bootstrap/pager";
+//@import "bootstrap/labels";
+//@import "bootstrap/badges";
+//@import "bootstrap/jumbotron";
+//@import "bootstrap/thumbnails";
+//@import "bootstrap/alerts";
+//@import "bootstrap/progress-bars";
+//@import "bootstrap/media";
+//@import "bootstrap/list-group";
+@import "bootstrap/panels";
+//@import "bootstrap/responsive-embed";
+//@import "bootstrap/wells";
+//@import "bootstrap/close";
+
+// Components w/ JavaScript
+//@import "bootstrap/modals";
+//@import "bootstrap/tooltip";
+//@import "bootstrap/popovers";
+//@import "bootstrap/carousel";
+
+// Utility classes
+//@import "bootstrap/utilities";
+//@import "bootstrap/responsive-utilities";
+
+// -------------------------------------------------------------------
+// Bootstrap Overridden Styles
+// -------------------------------------------------------------------
+
+.my-navbar {
+  @extend .navbar;
+  @media (min-width: $grid-float-breakpoint) {
+    border: none;
+    background-color: #FFF;
+    margin: 20px 0 0 0;
+  }
+}
+
+.my-col-xs-4 {
+  @extend .col-xs-4;
+  @media (max-width: 767px){
+    padding: 0 2px;
+  }
+}
+
+.panel-body {
+  @extend .panel-body;
+  $height: 200px;
+  height: $height;
+  overflow: scroll;
+  @media (max-width: 767px){
+    height: $height*0.5;
+   }
+}
+
+.panel-heading {
+  @extend .panel-heading;
+  @media (max-width: 767px){
+    font-size: 12px;
+    padding: 5px 15px;
+   } 
+}
+
+.panel-body {
+  @extend .panel-body;
+  @media (max-width: 767px){
+    font-size: 12px;
+   } 
+}

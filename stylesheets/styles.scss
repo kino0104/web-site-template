@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+// -------------------------------------------------------------------
+// Import Frameworks
+// -------------------------------------------------------------------
+@import 'bootstrap-custom';
+
+
+// -------------------------------------------------------------------
+// Variables
+// -------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------
+// Mixins
+// -------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------
+// Custom Styles
+// -------------------------------------------------------------------
+
+/* Base */
+
+h2 {
+  margin: 0;
+}
+
+/* Layout */
+
+#footer {
+  margin-top: 50px;
+  > p{
+    border-top: 1px solid #CCC;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Module */
+
+.Contents {
+  margin-top:5%;
+}
+
+@media screen and (max-width:767px){
+  .centering {
+    text-align: center; 
+  }
+}
+
+.imgWidth {
+  max-width: 100%;
+}
+
+.links {
+  background-color: #FFF;
+  color: #000;
+  display: block;
+  opacity: 1;
+  p {
+    word-wrap:break-word;
+  }
+  &:hover{
+    opacity: 0.4;
+    text-decoration: none;
+  }
+}
+
+.marginBtm {
+  margin-bottom: 10%;
+}
+
+
+@media screen and (min-width:768px){
+  .menu {
+    //border: none;
+    font-size: $font-size-large;
+    font-family: Arial, Verdana, sans-serif;
+    width: 100%;
+    
+    > li {
+      width: 25%;
+      margin: 0 auto;
+      text-align: center;
+      > a {
+        display: inline;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.subMenu {
+  margin: 25px 0 0 0;
+}
