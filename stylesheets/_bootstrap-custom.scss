@@ -4,8 +4,14 @@
 $font-family-sans-serif: 'Lucida Grande', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 $font-family-serif: Georgia, 'Hiragino Mincho ProN', serif;
 $font-family-monospace: Menlo, 'Courier New', 'Hiragino Kaku Gothic ProN', monospace;
-$navbar-default-link-hover-color: orange;
+$navbar-default-link-hover-color: #FFA500;
+$navbar-default-bg: #FFF;
 $container-lg: 970px;
+$navbar-default-toggle-border-color: none;
+$navbar-default-toggle-border-hover-color: #00BFFF;
+$navbar-default-toggle-hover-bg: none;
+$navbar-default-toggle-focus-bg: #ddd;
+
 // -------------------------------------------------------------------
 // Bootstrap Core
 // -------------------------------------------------------------------
@@ -64,43 +70,48 @@ $container-lg: 970px;
 // Bootstrap Overridden Styles
 // -------------------------------------------------------------------
 
-.my-navbar {
+.navbar {
   @extend .navbar;
   @media (min-width: $grid-float-breakpoint) {
     border: none;
-    background-color: #FFF;
-    margin: 20px 0 0 0;
+    margin-top: $line-height-computed;
   }
 }
 
-.my-col-xs-4 {
-  @extend .col-xs-4;
-  @media (max-width: 767px){
-    padding: 0 2px;
-  }
-}
+
 
 .panel-body {
   @extend .panel-body;
   $height: 200px;
   height: $height;
   overflow: scroll;
-  @media (max-width: 767px){
+  @media (max-width: $screen-xs-max){
+    font-size: $font-size-small;
     height: $height*0.5;
    }
 }
 
 .panel-heading {
   @extend .panel-heading;
-  @media (max-width: 767px){
-    font-size: 12px;
-    padding: 5px 15px;
+  @media (max-width: $screen-xs-max){
+    font-size: $font-size-small;
+    padding: $padding-small-vertical;
    } 
 }
 
-.panel-body {
-  @extend .panel-body;
-  @media (max-width: 767px){
-    font-size: 12px;
-   } 
+.navbar-brand {
+  font-size: ceil(($font-size-base * 1.5));
+  line-height: $line-height-computed;
+  @media (min-width: $screen-xs-max){
+    display: none;
+  }
+}
+.navbar-toggle {
+  &:hover {
+    outline:0;
+    border-color: $navbar-default-toggle-border-hover-color;
+  }
+  &:focus {
+    background-color: $navbar-default-toggle-focus-bg;
+  }
 }

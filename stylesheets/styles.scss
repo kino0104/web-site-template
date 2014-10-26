@@ -21,6 +21,13 @@
 // -------------------------------------------------------------------
 
 /* Base */
+h1 {
+  text-align: center;
+  @media (max-width: $screen-xs-max){
+    display: none;
+  }
+}
+
 
 h2 {
   margin: 0;
@@ -39,18 +46,8 @@ h2 {
 
 /* Module */
 
-.Contents {
+.contents {
   margin-top:5%;
-}
-
-@media screen and (max-width:767px){
-  .centering {
-    text-align: center; 
-  }
-}
-
-.imgWidth {
-  max-width: 100%;
 }
 
 .links {
@@ -67,6 +64,9 @@ h2 {
   }
 }
 
+.top-pickup {
+  margin-bottom: 5%;
+}
 .marginBtm {
   margin-bottom: 10%;
 }
@@ -92,5 +92,24 @@ h2 {
 }
 
 .subMenu {
-  margin: 25px 0 0 0;
+  margin: $line-height-computed 0;
+}
+
+.col-less-padding {
+  @media (max-width: $screen-xs-max){
+    padding: $line-height-computed*0.5;
+  }
+}
+
+.logo {
+  vertical-align: baseline;
+}
+
+.img-centering{
+    margin: 0 auto;
+}
+
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
 }
